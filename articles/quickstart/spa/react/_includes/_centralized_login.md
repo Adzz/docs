@@ -443,7 +443,7 @@ function App() {
     {/* other components removed for brevity */}
 
     {/* NEW - Modify the /profile route to use PrivateRoute instead of Route */}
-    <PrivateRoute path="/profile" component={Profile} />
+    <PrivateRoute path="/profile" render={() => <Profile />} />
   );
 }
 
