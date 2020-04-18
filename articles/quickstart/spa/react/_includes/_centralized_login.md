@@ -443,6 +443,8 @@ function App() {
     {/* other components removed for brevity */}
 
     {/* NEW - Modify the /profile route to use PrivateRoute instead of Route */}
+    {/* NOTE - If you use a render prop here, you will skip the check in the private route render */}
+    {/* meaning you will see a flash of content before the useEffect kicks in to redirect you. */}
     <PrivateRoute path="/profile" component={Profile} />
   );
 }
